@@ -2,6 +2,7 @@
 builder = "nixpacks"
 buildCommand = "npm config set cache /tmp/npm-cache --global && npm ci && npm run build && pip install --upgrade pip && pip install -r requirements.txt"
 
+
 [deploy]
 startCommand = "python app.py"
 
