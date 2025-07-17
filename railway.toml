@@ -1,0 +1,14 @@
+# railway.toml
+$schema = "https://railway.com/railway.schema.json"
+
+[build]
+builder      = "NIXPACKS"
+buildCommand = """
+  npm ci && \
+  npm run build && \
+  pip install --upgrade pip && \
+  pip install -r requirements.txt
+"""
+
+[deploy]
+startCommand = "gunicorn app:app --bind 0.0.0.0:$PORT --workers 4"
