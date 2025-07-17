@@ -5,5 +5,3 @@ buildCommand = "npm ci && npm run build && pip install --upgrade pip && pip inst
 [deploy]
 startCommand = "python app.py"
 
-
---
