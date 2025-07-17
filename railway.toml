@@ -1,14 +1,9 @@
-# railway.toml
-$schema = "https://railway.com/railway.schema.json"
-
 [build]
-builder      = "NIXPACKS"
-buildCommand = """
-  npm ci && \
-  npm run build && \
-  pip install --upgrade pip && \
-  pip install -r requirements.txt
-"""
+builder = "nixpacks"
+buildCommand = "npm ci && npm run build && pip install --upgrade pip && pip install -r requirements.txt"
 
 [deploy]
 startCommand = "python app.py"
+
+
+--
