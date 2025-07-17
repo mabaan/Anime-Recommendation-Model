@@ -7,7 +7,7 @@ import requests
 # Load data once at startup
 rating_df_clean, anime_df_clean = load_data()
 
-app = Flask(__name__, static_folder='frontend/build', static_url_path='')
+app = Flask(__name__, static_folder='build', static_url_path='')
 
 # Simple in-memory cache for poster URLs
 _poster_cache = {}
